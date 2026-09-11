@@ -664,3 +664,92 @@ footer > p {
     font-size: 14px;
     margin-top: 25px;
 }
+#typing {
+    color: #38bdf8;
+}
+/* Mobile Menu */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 700px) {
+
+    header {
+        position: sticky;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 15px;
+        padding-top: 15px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    header {
+        flex-wrap: wrap;
+    }
+}
+/* Theme Toggle */
+.theme-toggle {
+    margin: 0;
+    padding: 8px 12px;
+    background: transparent;
+    color: white;
+    border: 1px solid #38bdf8;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+}
+
+/* Light Mode */
+body.light-mode {
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+body.light-mode header,
+body.light-mode footer {
+    background: #e2e8f0;
+}
+
+body.light-mode nav a {
+    color: #0f172a;
+}
+
+body.light-mode .intro,
+body.light-mode #about p,
+body.light-mode .project-card p,
+body.light-mode .contact-info p {
+    color: #475569;
+}
+
+body.light-mode .about-item,
+body.light-mode .skill-card,
+body.light-mode .project-card,
+body.light-mode .contact-info,
+body.light-mode #contact-form input,
+body.light-mode #contact-form textarea {
+    background: white;
+    border-color: #cbd5e1;
+}
+
+body.light-mode .skill-card p {
+    color: #64748b;
+}

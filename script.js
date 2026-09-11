@@ -29,3 +29,66 @@ form.addEventListener("submit", function (event) {
 
     form.reset();
 });
+// Typing Animation
+const typingText = document.querySelector("#typing");
+
+const words = [
+    "Web Developer",
+    "Java Programmer",
+    "Python Developer",
+    "Full Stack Developer"
+];
+
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+function typeEffect() {
+    const currentWord = words[wordIndex];
+
+    if (!deleting) {
+        typingText.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex === currentWord.length) {
+            deleting = true;
+            setTimeout(typeEffect, 1500);
+            return;
+        }
+    } else {
+        typingText.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+
+        if (charIndex === 0) {
+            deleting = false;
+            wordIndex++;
+
+            if (wordIndex === words.length) {
+                wordIndex = 0;
+            }
+        }
+    }
+
+    setTimeout(typeEffect, deleting ? 60 : 100);
+}
+
+typeEffect();
+// Mobile Menu
+const menuIcon = document.querySelector("#menu-icon");
+const navMenu = document.querySelector("#nav-menu");
+
+menuIcon.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+});
+// Dark / Light Mode
+const themeToggle = document.querySelector("#theme-toggle");
+
+themeToggle.addEventListener("click", function () {
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+        themeToggle.textContent = "☀️";
+    } else {
+        themeToggle.textContent = "🌙";
+    }
+});
