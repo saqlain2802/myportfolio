@@ -17,51 +17,6 @@ links.forEach(function (link) {
     });
 });
 
-// Contact Form - Formspree
-const form = document.querySelector("#contact-form");
-
-form.addEventListener("submit", async function (event) {
-
-    event.preventDefault();
-
-    const submitButton = form.querySelector("button");
-
-    submitButton.textContent = "Sending...";
-    submitButton.disabled = true;
-
-    try {
-        const response = await fetch(form.action, {
-            method: "POST",
-            body: new FormData(form),
-            headers: {
-                "Accept": "application/json"
-            }
-        });
-
-        const data = await response.json();
-
-        console.log("Formspree response:", data);
-
-        if (response.ok) {
-            alert("Message sent successfully! 🚀📩");
-            form.reset();
-        } else {
-            alert(
-                "Formspree Error: " +
-                (data.error ||
-                data.errors?.[0]?.message ||
-                "Unknown error")
-            );
-        }
-
-    } catch (error) {
-        console.error("Error:", error);
-        alert("Network error. Please try again.");
-    }
-
-    submitButton.textContent = "Send Message";
-    submitButton.disabled = false;
-});
 // Typing Animation
 const typingText = document.querySelector("#typing");
 
