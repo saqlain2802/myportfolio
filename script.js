@@ -18,16 +18,40 @@ links.forEach(function (link) {
 });
 
 
-// Contact Form
+// Contact Form - Formspree
 const form = document.querySelector("#contact-form");
 
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", async function (event) {
 
     event.preventDefault();
 
-    alert("Thank you! Your message has been received. 🚀");
+    const submitButton = form.querySelector("button");
 
-    form.reset();
+    submitButton.textContent = "Sending...";
+    submitButton.disabled = true;
+
+    try {
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: {
+                "Accept": "application/json"
+            }
+        });
+
+        if (response.ok) {
+            alert("Message sent successfully! 🚀📩");
+            form.reset();
+        } else {
+            alert("Message could not be sent. Please try again.");
+        }
+
+    } catch (error) {
+        alert("Something went wrong. Please try again.");
+    }
+
+    submitButton.textContent = "Send Message";
+    submitButton.disabled = false;
 });
 // Typing Animation
 const typingText = document.querySelector("#typing");
