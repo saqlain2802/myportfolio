@@ -17,7 +17,6 @@ links.forEach(function (link) {
     });
 });
 
-
 // Contact Form - Formspree
 const form = document.querySelector("#contact-form");
 
@@ -39,15 +38,20 @@ form.addEventListener("submit", async function (event) {
             }
         });
 
+        const data = await response.json();
+
+        console.log("Formspree response:", data);
+
         if (response.ok) {
             alert("Message sent successfully! 🚀📩");
             form.reset();
         } else {
-            alert("Message could not be sent. Please try again.");
+            alert("Formspree Error: " + (data.error || data.errors?.[0]?.message || "Unknown error"));
         }
 
     } catch (error) {
-        alert("Something went wrong. Please try again.");
+        console.error("Error:", error);
+        alert("Network error. Please try again.");
     }
 
     submitButton.textContent = "Send Message";
