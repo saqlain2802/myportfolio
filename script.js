@@ -46,7 +46,12 @@ form.addEventListener("submit", async function (event) {
             alert("Message sent successfully! 🚀📩");
             form.reset();
         } else {
-            alert("Formspree Error: " + (data.error || data.errors?.[0]?.message || "Unknown error"));
+            alert(
+                "Formspree Error: " +
+                (data.error ||
+                data.errors?.[0]?.message ||
+                "Unknown error")
+            );
         }
 
     } catch (error) {
