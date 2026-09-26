@@ -13,14 +13,10 @@
 <body>
 
     <!-- NAVBAR -->
-    <header>
+    <header class="navbar">
 
-        <a href="#home" class="logo">
-            SAQLAIN<span>.</span>
-        </a>
-
-        <div class="menu-icon" id="menu-icon">
-            ☰
+        <div class="logo">
+            <span>S</span>
         </div>
 
         <nav id="nav-menu">
@@ -31,14 +27,22 @@
             <a href="#contact">Contact</a>
         </nav>
 
-        <button id="theme-toggle" class="theme-toggle">
-            🌙
-        </button>
+        <div class="nav-right">
+
+            <button id="theme-toggle" class="theme-toggle">
+                🌙
+            </button>
+
+            <div class="menu-icon" id="menu-icon">
+                ☰
+            </div>
+
+        </div>
 
     </header>
 
 
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section id="home" class="hero">
 
         <div class="hero-content">
@@ -48,16 +52,16 @@
             </p>
 
             <h1>
-                SAQLAIN<span>.</span>
+                Mohammed <span>Saqlain</span>
             </h1>
 
             <h2>
-                <span id="typing"></span>
+                I'm a <span id="typing"></span>
             </h2>
 
             <p class="hero-description">
                 I build modern, responsive and user-friendly
-                web applications with clean and creative design.
+                websites and applications using modern technologies.
             </p>
 
             <div class="hero-buttons">
@@ -75,12 +79,15 @@
         </div>
 
 
-        <!-- PROFILE IMAGE -->
         <div class="hero-image">
 
-            <div class="image-glow"></div>
+            <div class="image-circle">
 
-            <img src="profile.jpg" alt="Saqlain">
+                <div class="profile-placeholder">
+                    S
+                </div>
+
+            </div>
 
         </div>
 
@@ -88,57 +95,28 @@
 
 
     <!-- ABOUT -->
-    <section id="about">
+    <section id="about" class="section">
 
-        <div class="section-heading">
-            <p>ABOUT ME</p>
-            <h2>Who I Am</h2>
-        </div>
+        <p class="section-tag">
+            ABOUT ME
+        </p>
+
+        <h2>
+            Turning Ideas Into <span>Digital Experiences</span>
+        </h2>
 
         <div class="about-content">
 
-            <div class="about-text">
+            <p>
+                I'm Saqlain, a passionate developer and student
+                interested in building modern websites and
+                software applications.
+            </p>
 
-                <h3>
-                    I'm a Student & Aspiring
-                    <span>Full Stack Developer.</span>
-                </h3>
-
-                <p>
-                    Hi! I'm Saqlain. I enjoy learning programming,
-                    building websites and creating useful projects.
-                </p>
-
-                <p>
-                    I'm currently developing my skills in frontend,
-                    backend and database technologies.
-                </p>
-
-                <a href="#contact" class="btn primary-btn">
-                    Let's Connect
-                </a>
-
-            </div>
-
-
-            <div class="about-stats">
-
-                <div class="stat-card">
-                    <h3>9+</h3>
-                    <p>Skills</p>
-                </div>
-
-                <div class="stat-card">
-                    <h3>3+</h3>
-                    <p>Projects</p>
-                </div>
-
-                <div class="stat-card">
-                    <h3>2026</h3>
-                    <p>Learning & Building</p>
-                </div>
-
-            </div>
+            <p>
+                I enjoy learning new technologies, solving problems
+                and turning ideas into real-world projects.
+            </p>
 
         </div>
 
@@ -146,67 +124,70 @@
 
 
     <!-- SKILLS -->
-    <section id="skills">
+    <section id="skills" class="section">
 
-        <div class="section-heading">
-            <p>MY SKILLS</p>
-            <h2>Technologies I Work With</h2>
-        </div>
+        <p class="section-tag">
+            MY SKILLS
+        </p>
 
-        <div class="skills-container">
+        <h2>
+            Technical <span>Capabilities</span>
+        </h2>
+
+        <div class="skills-grid">
 
             <div class="skill-card">
-                <span>01</span>
+                <div class="skill-icon">🌐</div>
                 <h3>HTML</h3>
-                <p>Web Structure</p>
+                <p>Building structured web pages.</p>
             </div>
 
             <div class="skill-card">
-                <span>02</span>
+                <div class="skill-icon">🎨</div>
                 <h3>CSS</h3>
-                <p>Modern Web Design</p>
+                <p>Creating responsive modern designs.</p>
             </div>
 
             <div class="skill-card">
-                <span>03</span>
+                <div class="skill-icon">⚡</div>
                 <h3>JavaScript</h3>
-                <p>Web Interaction</p>
+                <p>Adding interactive functionality.</p>
             </div>
 
             <div class="skill-card">
-                <span>04</span>
+                <div class="skill-icon">⚛️</div>
                 <h3>React</h3>
-                <p>Frontend Development</p>
+                <p>Building modern web interfaces.</p>
             </div>
 
             <div class="skill-card">
-                <span>05</span>
+                <div class="skill-icon">🐍</div>
                 <h3>Python</h3>
-                <p>Programming</p>
+                <p>Programming and application development.</p>
             </div>
 
             <div class="skill-card">
-                <span>06</span>
+                <div class="skill-icon">☕</div>
                 <h3>Java</h3>
-                <p>Programming</p>
+                <p>Object-oriented application development.</p>
             </div>
 
             <div class="skill-card">
-                <span>07</span>
+                <div class="skill-icon">🍃</div>
                 <h3>Spring Boot</h3>
-                <p>Backend Development</p>
+                <p>Building backend REST APIs.</p>
             </div>
 
             <div class="skill-card">
-                <span>08</span>
+                <div class="skill-icon">🗄️</div>
                 <h3>MySQL</h3>
-                <p>SQL Database</p>
+                <p>Managing relational databases.</p>
             </div>
 
             <div class="skill-card">
-                <span>09</span>
+                <div class="skill-icon">🍃</div>
                 <h3>MongoDB</h3>
-                <p>NoSQL Database</p>
+                <p>Working with NoSQL databases.</p>
             </div>
 
         </div>
@@ -215,35 +196,38 @@
 
 
     <!-- PROJECTS -->
-    <section id="projects">
+    <section id="projects" class="section">
 
-        <div class="section-heading">
-            <p>MY WORK</p>
-            <h2>Featured Projects</h2>
-        </div>
+        <p class="section-tag">
+            MY WORK
+        </p>
 
-        <div class="project-container">
+        <h2>
+            Featured <span>Projects</span>
+        </h2>
+
+        <div class="projects-grid">
 
             <div class="project-card">
 
-                <div class="project-number">
+                <p class="project-number">
                     01
-                </div>
+                </p>
 
-                <h3>CRUD Product API</h3>
+                <h3>
+                    CRUD Product API
+                </h3>
 
                 <p>
-                    A product management REST API built using
+                    A backend CRUD application built using
                     Java, Spring Boot and MySQL.
                 </p>
 
-                <div class="tech">
-                    <span>Java</span>
-                    <span>Spring Boot</span>
-                    <span>MySQL</span>
+                <div class="project-tech">
+                    Java · Spring Boot · MySQL
                 </div>
 
-                <a href="#" class="project-btn">
+                <a href="#" class="project-link">
                     View Project →
                 </a>
 
@@ -252,24 +236,24 @@
 
             <div class="project-card">
 
-                <div class="project-number">
+                <p class="project-number">
                     02
-                </div>
+                </p>
 
-                <h3>Personal Portfolio</h3>
+                <h3>
+                    Personal Portfolio
+                </h3>
 
                 <p>
                     A responsive personal portfolio website
-                    built with HTML, CSS and JavaScript.
+                    created using HTML, CSS and JavaScript.
                 </p>
 
-                <div class="tech">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
+                <div class="project-tech">
+                    HTML · CSS · JavaScript
                 </div>
 
-                <a href="#" class="project-btn">
+                <a href="#" class="project-link">
                     View Project →
                 </a>
 
@@ -278,23 +262,24 @@
 
             <div class="project-card">
 
-                <div class="project-number">
+                <p class="project-number">
                     03
-                </div>
-
-                <h3>Future Project</h3>
-
-                <p>
-                    A new project currently under development.
-                    More details will be added soon.
                 </p>
 
-                <div class="tech">
-                    <span>Web</span>
-                    <span>JavaScript</span>
+                <h3>
+                    Future Project
+                </h3>
+
+                <p>
+                    An upcoming project where I will explore
+                    new technologies and ideas.
+                </p>
+
+                <div class="project-tech">
+                    React · Python · MongoDB
                 </div>
 
-                <a href="#" class="project-btn">
+                <a href="#" class="project-link">
                     Coming Soon →
                 </a>
 
@@ -306,20 +291,22 @@
 
 
     <!-- CONTACT -->
-    <section id="contact">
+    <section id="contact" class="section contact-section">
 
-        <div class="section-heading">
-            <p>CONTACT ME</p>
-            <h2>Let's Work Together</h2>
-        </div>
+        <p class="section-tag">
+            CONTACT
+        </p>
+
+        <h2>
+            Let's <span>Connect</span>
+        </h2>
 
         <div class="contact-container">
 
             <div class="contact-info">
 
                 <h3>
-                    Have a project
-                    <span>in mind?</span>
+                    Have a project in mind?
                 </h3>
 
                 <p>
@@ -327,36 +314,40 @@
                     in learning, building and working on new projects.
                 </p>
 
-                <p>📧 Your Email</p>
-                <p>📍 India</p>
+                <p>
+                    📍 India
+                </p>
 
             </div>
 
 
             <form id="contact-form"
-                  action="https://formspree.io/f/xdeovvb"
-                  method="POST">
+                action="https://formspree.io/f/xdeovvb"
+                method="POST">
 
                 <input
                     type="text"
                     name="name"
                     placeholder="Your Name"
-                    required>
+                    required
+                >
 
                 <input
                     type="email"
                     name="email"
                     placeholder="Your Email"
-                    required>
+                    required
+                >
 
                 <textarea
                     name="message"
                     placeholder="Your Message"
                     rows="6"
-                    required></textarea>
+                    required
+                ></textarea>
 
-                <button type="submit" class="btn primary-btn">
-                    Send Message →
+                <button type="submit">
+                    Send Message
                 </button>
 
             </form>
@@ -369,9 +360,9 @@
     <!-- FOOTER -->
     <footer>
 
-        <h3>
-            SAQLAIN<span>.</span>
-        </h3>
+        <div class="footer-logo">
+            Saqlain<span>.</span>
+        </div>
 
         <p>
             Web Developer | Programmer | Student
@@ -379,9 +370,14 @@
 
         <div class="social-links">
 
-            <a href="https://www.instagram.com/mr_.perfect_.282"
-               target="_blank">
+            <a href="https://www.instagram.com/mr_.perfect_.282/"
+                target="_blank">
                 Instagram
+            </a>
+
+            <a href="https://github.com/saqlain2802"
+                target="_blank">
+                GitHub
             </a>
 
         </div>
@@ -393,6 +389,7 @@
     </footer>
 
 
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
 </body>
