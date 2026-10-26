@@ -1,154 +1,60 @@
-/* ================= MOBILE MENU ================= */
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
 
-const menuIcon = document.querySelector("#menu-icon");
-const navMenu = document.querySelector("#nav-menu");
-
-if (menuIcon) {
-
-    menuIcon.addEventListener("click", function () {
-
-        navMenu.classList.toggle("active");
-
-    });
-
+if (menuBtn) {
+  menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+    menuBtn.textContent = navMenu.classList.contains("open") ? "✕" : "☰";
+  });
 }
 
-
-/* ================= CLOSE MOBILE MENU ================= */
-
-const navLinks = document.querySelectorAll("nav a");
-
-navLinks.forEach(function (link) {
-
-    link.addEventListener("click", function () {
-
-        navMenu.classList.remove("active");
-
-    });
-
+document.querySelectorAll("#navMenu a").forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("open");
+    menuBtn.textContent = "☰";
+  });
 });
 
+const sections = document.querySelectorAll("section[id]");
+const links = document.querySelectorAll("#navMenu a");
 
-/* ================= TYPING EFFECT ================= */
-
-const heroTitle = document.querySelector(".small-red");
-
-const titles = [
-    "FULL STACK DEVELOPER",
-    "JAVA DEVELOPER",
-    "PYTHON DEVELOPER",
-    "WEB DEVELOPER"
-];
-
-let titleIndex = 0;
-
-setInterval(function () {
-
-    titleIndex++;
-
-    if (titleIndex >= titles.length) {
-        titleIndex = 0;
+window.addEventListener("scroll", () => {
+  let current = "home";
+  sections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - 180) {
+      current = section.id;
     }
+  });
 
-    if (heroTitle) {
-        heroTitle.textContent = titles[titleIndex];
-    }
-
-}, 2500);
-
-
-/* ================= SCROLL REVEAL ================= */
-
-const revealElements = document.querySelectorAll(
-    ".section, .project-card, .skill-card, .capability-grid > div"
-);
-
-const observer = new IntersectionObserver(
-
-    function (entries) {
-
-        entries.forEach(function (entry) {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("show");
-
-            }
-
-        });
-
-    },
-
-    {
-        threshold: 0.12
-    }
-
-);
-
-
-revealElements.forEach(function (element) {
-
-    observer.observe(element);
-
+  links.forEach(link => {
+    link.classList.toggle("active", link.getAttribute("href") === `#${current}`);
+  });
 });
 
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
 
-/* ================= ACTIVE NAVIGATION ================= */
+document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
 
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", function () {
-
-    let current = "";
-
-    sections.forEach(function (section) {
-
-        const sectionTop = section.offsetTop - 150;
-
-        if (window.scrollY >= sectionTop) {
-
-            current = section.getAttribute("id");
-
-        }
-
-    });
-
-    navLinks.forEach(function (link) {
-
-        link.style.color = "";
-
-        if (link.getAttribute("href") === "#" + current) {
-
-            link.style.color = "#ff1e2d";
-
-        }
-
-    });
-
+const glow = document.querySelector(".cursor-glow");
+window.addEventListener("pointermove", event => {
+  glow.style.left = `${event.clientX}px`;
+  glow.style.top = `${event.clientY}px`;
 });
 
+const form = document.getElementById("contact-form");
+const formNote = document.getElementById("formNote");
 
-/* ================= CONTACT FORM ================= */
-
-/*
-   Formspree endpoint is kept in index.html.
-   The form will submit directly to Formspree.
-*/
-
-const contactForm = document.querySelector("#contact-form");
-
-if (contactForm) {
-
-    contactForm.addEventListener("submit", function () {
-
-        const button = contactForm.querySelector("button");
-
-        if (button) {
-
-            button.textContent = "SENDING...";
-
-        }
-
-    });
-
+if (form) {
+  form.addEventListener("submit", () => {
+    const button = form.querySelector("button");
+    if (button) button.innerHTML = "SENDING... <span>↗</span>";
+    if (formNote) formNote.textContent = "Sending your message...";
+  });
 }

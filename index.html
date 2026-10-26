@@ -1,557 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Saqlain | Full Stack Developer</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saqlain — Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <!-- NAVBAR -->
+  <div class="cursor-glow"></div>
 
-    <header class="navbar">
+  <header class="header">
+    <a class="brand" href="#home">SAQLAIN<span>.</span></a>
 
-        <div class="logo">
-            SAQLAIN<span>.</span>
+    <nav id="navMenu">
+      <a class="active" href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+
+    <a class="header-cta" href="#contact">LET'S TALK <span>↗</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span></span> FULL STACK DEVELOPER</div>
+        <p class="hero-kicker">AVAILABLE FOR NEW PROJECTS · 2026</p>
+
+        <h1>
+          MOHAMMED<br>
+          <em>SAQLAIN.</em><br>
+        </h1>
+
+        <p class="hero-text">
+          I'm Saqlain — a developer focused on building clean,
+          modern and useful web applications with strong frontend 
+          and backend foundations.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn red" href="#projects">VIEW PROJECTS <span>↗</span></a>
+          <a class="btn dark" href="#contact">CONTACT ME <span>→</span></a>
         </div>
 
-        <nav id="nav-menu">
+        <div class="hero-meta">
+          <span>JAVA</span><i>•</i><span>PYTHON</span><i>•</i>
+          <span>REACT</span><i>•</i><span>SPRING BOOT</span>
+        </div>
+      </div>
 
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-
-        </nav>
-
-        <a href="#contact" class="nav-button">
-            Let's Talk
-        </a>
-
-        <div class="menu-icon" id="menu-icon">
-            ☰
+      <div class="hero-visual reveal">
+        <div class="image-frame">
+          <div class="frame-label top">01 / 01</div>
+          <div class="frame-label bottom">SAQLAIN · DEVELOPER</div>
+          <div class="red-corner"></div>
+          <img src="assets/.jpg" alt="Saqlain">profile
         </div>
 
-    </header>
+        <div class="floating-card">
+          <span class="dot"></span>
+          <div>
+            <small>CURRENT FOCUS</small>
+            <strong>FULL STACK<br>DEVELOPMENT</strong>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <div class="ticker">
+      <div class="ticker-track">
+        <span>WEB DEVELOPMENT</span><b>✦</b>
+        <span>JAVA</span><b>✦</b>
+        <span>PYTHON</span><b>✦</b>
+        <span>REACT</span><b>✦</b>
+        <span>SPRING BOOT</span><b>✦</b>
+        <span>MONGODB</span><b>✦</b>
+        <span>WEB DEVELOPMENT</span><b>✦</b>
+        <span>JAVA</span><b>✦</b>
+        <span>PYTHON</span><b>✦</b>
+        <span>REACT</span><b>✦</b>
+      </div>
+    </div>
 
-    <!-- HERO -->
+    <section class="section" id="about">
+      <div class="section-top reveal">
+        <span class="number">01</span>
+        <p>ABOUT ME</p>
+      </div>
 
-    <main>
+      <div class="about-grid">
+        <h2 class="reveal">I TURN <em>IDEAS</em><br>INTO DIGITAL<br>PRODUCTS.</h2>
 
-        <section id="home" class="hero">
+        <div class="about-copy reveal">
+          <p>
+            I'm Saqlain, a student and developer who enjoys learning
+            technology by actually building things.
+          </p>
+          <p>
+            My interests span frontend development, Java, Python,
+            REST APIs, databases and full stack applications.
+          </p>
+          <div class="stats">
+            <div><strong>09</strong><small>SKILLS</small></div>
+            <div><strong>03+</strong><small>PROJECTS</small></div>
+            <div><strong>∞</strong><small>LEARNING</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="hero-content">
+    <section class="section dark-section" id="skills">
+      <div class="section-top reveal">
+        <span class="number">02</span>
+        <p>TECH STACK</p>
+      </div>
 
-                <p class="small-red">
-                    FULL STACK DEVELOPER
-                </p>
+      <h2 class="section-title reveal">TOOLS I <em>WORK</em> WITH.</h2>
 
-                <h1>
-                    BUILDING
-                    <span> DIGITAL</span>
-                    <br>
-                    EXPERIENCES.
-                </h1>
+      <div class="skills-list">
+        <div class="skill reveal"><span>01</span><strong>HTML / CSS</strong><small>01</small></div>
+        <div class="skill reveal"><span>02</span><strong>JAVASCRIPT</strong><small>02</small></div>
+        <div class="skill reveal"><span>03</span><strong>REACT</strong><small>03</small></div>
+        <div class="skill reveal"><span>04</span><strong>PYTHON</strong><small>04</small></div>
+        <div class="skill reveal"><span>05</span><strong>JAVA</strong><small>05</small></div>
+        <div class="skill reveal"><span>06</span><strong>SPRING BOOT</strong><small>06</small></div>
+        <div class="skill reveal"><span>07</span><strong>MYSQL</strong><small>07</small></div>
+        <div class="skill reveal"><span>08</span><strong>MONGODB</strong><small>08</small></div>
+        <div class="skill reveal"><span>09</span><strong>REST API</strong><small>09</small></div>
+      </div>
+    </section>
 
-                <p class="hero-description">
-                    I'm Saqlain, a developer who enjoys building
-                    modern websites, applications and digital
-                    experiences using clean and powerful technology.
-                </p>
+    <section class="section" id="projects">
+      <div class="section-top reveal">
+        <span class="number">03</span>
+        <p>SELECTED WORK</p>
+      </div>
 
-                <div class="hero-buttons">
+      <div class="projects-head reveal">
+        <h2>RECENT <em>PROJECTS.</em></h2>
+        <p>A few things I've built while learning, experimenting and improving.</p>
+      </div>
 
-                    <a href="#projects" class="red-button">
-                        View Projects
-                    </a>
+      <div class="projects-grid">
+        <article class="project reveal">
+          <div class="project-top"><span>01</span><span>JAVA / SPRING BOOT</span></div>
+          <div class="project-body">
+            <h3>PRODUCT<br><em>CRUD API</em></h3>
+            <p>REST API for creating, reading, updating and deleting products with MySQL.</p>
+            <div class="tags"><span>JAVA</span><span>SPRING BOOT</span><span>MYSQL</span><span>POSTMAN</span></div>
+          </div>
+          <div class="project-arrow">↗</div>
+        </article>
 
-                    <a href="#contact" class="outline-button">
-                        Contact Me
-                    </a>
+        <article class="project featured-project reveal">
+          <div class="project-top"><span>02</span><span>HTML / CSS / JS</span></div>
+          <div class="project-body">
+            <h3>PERSONAL<br><em>PORTFOLIO</em></h3>
+            <p>A responsive portfolio designed to showcase my skills, projects and development journey.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JAVASCRIPT</span></div>
+          </div>
+          <div class="project-arrow">↗</div>
+        </article>
 
-                </div>
+        <article class="project reveal">
+          <div class="project-top"><span>03</span><span>COMING SOON</span></div>
+          <div class="project-body">
+            <h3>FUTURE<br><em>PROJECT</em></h3>
+            <p>Something new is being built. This space will be updated with the next project.</p>
+            <div class="tags"><span>BUILDING</span><span>LEARNING</span></div>
+          </div>
+          <div class="project-arrow">↗</div>
+        </article>
+      </div>
+    </section>
 
-            </div>
+    <section class="contact-section" id="contact">
+      <div class="section-top reveal">
+        <span class="number">04</span>
+        <p>GET IN TOUCH</p>
+      </div>
 
-
-            <div class="hero-side">
-
-                <div class="code-box">
-
-                    <span>&lt;developer&gt;</span>
-
-                    <p>
-                        Java<br>
-                        Python<br>
-                        React<br>
-                        Spring Boot<br>
-                        MongoDB
-                    </p>
-
-                    <span>&lt;/developer&gt;</span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- MARQUEE -->
-
-        <div class="marquee">
-
-            <div>
-                WEB DEVELOPMENT
-                <span>✦</span>
-                FULL STACK
-                <span>✦</span>
-                JAVA
-                <span>✦</span>
-                PYTHON
-                <span>✦</span>
-                REACT
-                <span>✦</span>
-            </div>
-
+      <div class="contact-grid">
+        <div class="reveal">
+          <h2>LET'S BUILD<br><em>SOMETHING.</em></h2>
+          <p class="contact-intro">Have an idea, project or opportunity? Send me a message.</p>
+          <div class="contact-links">
+            <a href="https://github.com/saqlain2802" target="_blank">GITHUB ↗</a>
+            <a href="https://www.instagram.com/mr_.perfect_.282" target="_blank">INSTAGRAM ↗</a>
+          </div>
         </div>
 
-
-        <!-- ABOUT -->
-
-        <section id="about" class="section about">
-
-            <div class="section-heading">
-
-                <p>01 / ABOUT</p>
-
-                <h2>
-                    Turning ideas into
-                    <span>digital reality.</span>
-                </h2>
-
-            </div>
-
-            <div class="about-grid">
-
-                <div class="about-text">
-
-                    <p>
-                        I'm Saqlain, a passionate developer and student
-                        interested in web development and software engineering.
-                    </p>
-
-                    <p>
-                        I enjoy learning new technologies and turning
-                        ideas into functional and modern applications.
-                    </p>
-
-                    <p>
-                        My current interests include Full Stack Development,
-                        Java, Python, React and backend development.
-                    </p>
-
-                </div>
-
-
-                <div class="stats">
-
-                    <div class="stat">
-                        <strong>09</strong>
-                        <span>TECHNOLOGIES</span>
-                    </div>
-
-                    <div class="stat">
-                        <strong>03+</strong>
-                        <span>PROJECTS</span>
-                    </div>
-
-                    <div class="stat">
-                        <strong>∞</strong>
-                        <span>IDEAS</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- SKILLS -->
-
-        <section id="skills" class="section">
-
-            <div class="section-heading">
-
-                <p>02 / SKILLS</p>
-
-                <h2>
-                    My technical
-                    <span>arsenal.</span>
-                </h2>
-
-            </div>
-
-
-            <div class="skills-grid">
-
-                <div class="skill-card">
-                    <span>01</span>
-                    <h3>HTML</h3>
-                    <p>Structure & Semantic Web</p>
-                </div>
-
-                <div class="skill-card">
-                    <span>02</span>
-                    <h3>CSS</h3>
-                    <p>Responsive UI & Design</p>
-                </div>
-
-                <div class="skill-card">
-                    <span>03</span>
-                    <h3>JavaScript</h3>
-                    <p>Interactive Web Experiences</p>
-                </div>
-
-                <div class="skill-card">
-                    <span>04</span>
-                    <h3>React</h3>
-                    <p>Modern Frontend Development</p>
-                </div>
-
-                <div class="skill-card">
-                    <span>05</span>
-                    <h3>Python</h3>
-                    <p>Programming & Backend</p>
-                </div>
-
-                <div class="skill-card">
-                    <span>06</span>
-                    <h3>Java</h3>
-                    <p>Application Development</p>
-                </div>
-
-                <div class="skill-card">
-                    <span>07</span>
-                    <h3>Spring Boot</h3>
-                    <p>REST API Development</p>
-                </div>
-
-                <div class="skill-card">
-                    <span>08</span>
-                    <h3>MySQL</h3>
-                    <p>Database Management</p>
-                </div>
-
-                <div class="skill-card">
-                    <span>09</span>
-                    <h3>MongoDB</h3>
-                    <p>NoSQL Database</p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- PROJECTS -->
-
-        <section id="projects" class="section projects">
-
-            <div class="section-heading">
-
-                <p>03 / SELECTED WORK</p>
-
-                <h2>
-                    Things I've
-                    <span>built.</span>
-                </h2>
-
-            </div>
-
-
-            <div class="project-grid">
-
-
-                <article class="project-card featured">
-
-                    <div class="project-number">
-                        01
-                    </div>
-
-                    <div class="project-content">
-
-                        <p>JAVA • SPRING BOOT • MYSQL</p>
-
-                        <h3>
-                            CRUD Product
-                            <span>API</span>
-                        </h3>
-
-                        <p>
-                            A backend REST API for managing products
-                            with create, read, update and delete operations.
-                        </p>
-
-                        <div class="project-tags">
-
-                            <span>Java</span>
-                            <span>Spring Boot</span>
-                            <span>MySQL</span>
-                            <span>Postman</span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="project-card">
-
-                    <div class="project-number">
-                        02
-                    </div>
-
-                    <div class="project-content">
-
-                        <p>HTML • CSS • JAVASCRIPT</p>
-
-                        <h3>
-                            Personal
-                            <span>Portfolio</span>
-                        </h3>
-
-                        <p>
-                            A responsive personal portfolio website
-                            designed to showcase my skills and projects.
-                        </p>
-
-                        <div class="project-tags">
-
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="project-card">
-
-                    <div class="project-number">
-                        03
-                    </div>
-
-                    <div class="project-content">
-
-                        <p>COMING SOON</p>
-
-                        <h3>
-                            Future
-                            <span>Project</span>
-                        </h3>
-
-                        <p>
-                            Something new is currently being built.
-                            Stay tuned for the next project.
-                        </p>
-
-                        <div class="project-tags">
-
-                            <span>Innovation</span>
-                            <span>Development</span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- EXPERIENCE STYLE SECTION -->
-
-        <section class="section capabilities">
-
-            <div class="section-heading">
-
-                <p>04 / WHAT I DO</p>
-
-                <h2>
-                    Built for
-                    <span>impact.</span>
-                </h2>
-
-            </div>
-
-
-            <div class="capability-grid">
-
-                <div>
-                    <span>01</span>
-                    <h3>Frontend Development</h3>
-                    <p>
-                        Clean, responsive and interactive user interfaces.
-                    </p>
-                </div>
-
-                <div>
-                    <span>02</span>
-                    <h3>Backend Development</h3>
-                    <p>
-                        REST APIs and backend applications using Java
-                        and Spring Boot.
-                    </p>
-                </div>
-
-                <div>
-                    <span>03</span>
-                    <h3>Database Development</h3>
-                    <p>
-                        Working with MySQL and MongoDB to manage application data.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONTACT -->
-
-        <section id="contact" class="section contact">
-
-            <div class="contact-heading">
-
-                <p>05 / CONTACT</p>
-
-                <h2>
-                    HAVE A PROJECT
-                    <span>IN MIND?</span>
-                </h2>
-
-                <p>
-                    Let's build something meaningful together.
-                </p>
-
-            </div>
-
-
-            <form
-                id="contact-form"
-                action="https://formspree.io/f/xdeovvb"
-                method="POST"
-                class="contact-form">
-
-                <div class="input-row">
-
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Your Name"
-                        required>
-
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Your Email"
-                        required>
-
-                </div>
-
-                <textarea
-                    name="message"
-                    rows="7"
-                    placeholder="Tell me about your project..."
-                    required></textarea>
-
-                <button type="submit" class="red-button">
-                    SEND MESSAGE →
-                </button>
-
-            </form>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <div class="footer-top">
-
-            <div>
-
-                <h2>
-                    SAQLAIN<span>.</span>
-                </h2>
-
-                <p>
-                    Web Developer • Programmer • Student
-                </p>
-
-            </div>
-
-
-            <div class="social-links">
-
-                <a
-                    href="https://github.com/saqlain2802"
-                    target="_blank">
-                    GitHub ↗
-                </a>
-
-                <a
-                    href="https://www.instagram.com/mr_.perfect_.282"
-                    target="_blank">
-                    Instagram ↗
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="footer-bottom">
-
-            <p>
-                © 2026 Saqlain. All Rights Reserved.
-            </p>
-
-            <p>
-                Designed & Built by Saqlain
-            </p>
-
-        </div>
-
-    </footer>
-
-
-    <script src="script.js"></script>
-
+        <form id="contact-form" class="contact-form reveal"
+              action="https://formspree.io/f/xdeovvb" method="POST">
+          <label>YOUR NAME<input type="text" name="name" placeholder="Enter your name" required></label>
+          <label>YOUR EMAIL<input type="email" name="email" placeholder="Enter your email" required></label>
+          <label>MESSAGE<textarea name="message" rows="6" placeholder="Tell me about your project..." required></textarea></label>
+          <button class="btn red" type="submit">SEND MESSAGE <span>↗</span></button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">SAQLAIN<span>.</span></div>
+    <p>WEB DEVELOPER · PROGRAMMER · STUDENT</p>
+    <small>© 2026 SAQLAIN. ALL RIGHTS RESERVED.</small>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
